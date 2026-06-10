@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Never commit pixels — frames can carry faces / documents / plates.
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+
+# Never commit model weights.
+*.pt
+*.jit
+*.onnx
+*.pth
+*.safetensors

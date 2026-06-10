@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use UCAP, please cite the diploma project below."
+type: software
+title: "UCAP — Utility Carve-out of Anonymisation Protocol"
+authors:
+  - family-names: Kostarczyk
+    given-names: Bartosz
+version: "1.0.0"
+date-released: "2026-06-10"
+abstract: >-
+  Depth-gated anonymization pipeline for egocentric RGB video: recall-first
+  promptable segmentation (SAM 3) gated by a metric depth estimate (UniDepth v2
+  or stereo SGBM) preserves the near-field interaction zone while redacting
+  background PII; unresolved privacy/utility collisions are flagged for human
+  review rather than resolved silently.
+preferred-citation:
+  type: report
+  title: "Reconciling Privacy and Utility in Egocentric RGB Video: A Depth-Gated Anonymization Pipeline for Embodied-AI Training Data"
+  authors:
+    - family-names: Kostarczyk
+      given-names: Bartosz
+  year: 2026
+  institution:
+    name: "Kozminski University"

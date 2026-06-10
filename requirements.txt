@@ -1,0 +1,31 @@
+# Dependencies for the egocentric-anonymization benchmark code.
+#
+# CPU core — enough to run metrics.py, video_io.py, pipeline.py and the tests:
+numpy
+opencv-python-headless
+
+# Model inference (Google Colab, single T4) — adds the deep-learning stack.
+# IMPORTANT: install transformers from `main` for the SAM 3 model classes:
+#   pip install "git+https://github.com/huggingface/transformers.git"
+torch
+transformers
+accelerate
+huggingface_hub
+pillow
+matplotlib
+
+# Paradigm-A specialist-zoo candidates — install per benchmark, as needed
+# (concrete adapters in backends.py; run via run_benchmark_colab.py):
+#   torch torchvision        # EgoBlur face/plate TorchScript models (Apache-2.0)
+#                            #   weights: ego_blur_face.jit / ego_blur_lp.jit from
+#                            #   github.com/facebookresearch/EgoBlur (HF projectaria/EgoBlur)
+#   paddleocr paddlepaddle-gpu  # scene-text detection (PP-OCRv4/v5, Apache-2.0)
+#   supervision              # ByteTrack tracker → temporal recall (MIT)
+#   insightface              # RetinaFace / SCRFD face detectors (research-only weights)
+#   ultralytics              # YOLO (AGPL-3.0) + SAM 3 (Paradigm B, gated facebook/sam3)
+#   nudenet                  # NSFW frame-level triage (separate stage, not a Detector)
+#
+# Paradigm-B promptable backends — installed inside the spike notebooks:
+#   git+https://github.com/SimonZeng7108/efficientsam3.git
+#   git+https://github.com/facebookresearch/EdgeTAM.git
+#   git+https://github.com/yformer/EfficientTAM.git
